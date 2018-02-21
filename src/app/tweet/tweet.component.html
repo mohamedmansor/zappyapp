@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Tweet List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Tweet Text</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tweet of tweets">
+        <td>{{ tweet.text }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
