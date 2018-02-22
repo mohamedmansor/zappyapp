@@ -29,6 +29,8 @@
     "morgan": "^1.9.0",
     "rxjs": "^5.5.6",
     "serve-favicon": "^2.4.5",
+    "slack-node": "^0.1.8",
+    "twit": "^2.2.9",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
