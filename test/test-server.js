@@ -21,4 +21,20 @@ describe('Tweets', function(){
             done();
         });
     });
+    it('should add a single tweet text', function(done){
+        chai.request(server)
+        .post('/tweet')
+        .send({'text': 'testing post function'})
+        .end(function(err, res){
+            res.should.have.status(200);
+            res.should.be.json;
+            res.body.should.be.a('object')
+            res.body.should.have.property('text');
+            res.body.should.have.property('_id');
+            res.body.should.be.a('object');
+            res.body.text.should.equal('testing post function');
+            done();
+
+        });
+    });
 });
