@@ -29,7 +29,11 @@ slack.api('channels.history', {
                 tweetToJson = {
                     "text": tweet_text
                 }
-                console.log(tweetToJson)
+                Tweet.create({text: tweet_text}, function(err, twt){
+                    if (err) handleError(err);
+                    // console.log(twt)
+                })
+                // console.log(tweetToJson)
             }
             // console.log(arr)
         })

@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 // var book = require('./routes/book');
 var api = require('./routes/api');
+twtSlack = require('./routes/slack-twitter')
 var app = express();
 
 
@@ -19,6 +20,8 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/tweets', express.static(path.join(__dirname, 'dist')));
 // app.use('/book', book);
 app.use('/tweet', api);
+// app.use('/home', twtSlack)
+// app.use('/home', express.static(path.join(__dirname, 'dist')));
 
 mongoose.connect('mongodb://localhost/zappy-tweets', { promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))

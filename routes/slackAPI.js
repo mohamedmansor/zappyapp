@@ -10,10 +10,10 @@ slack.api('channels.history',
     channel: 'C89F8BSUV',
     count: 1
   }, function(err, response){
-    var hot_word = response.messages[0].text
+    var hot_word = response['messages'][0]['text'];
+    console.log(hot_word)
     if(hot_word === "go"){
       console.log(hot_word)
-      var twitter = require('./twitter')
     }
     else{
       console.log("just normal chat... SKIP AD")
