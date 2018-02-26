@@ -23,7 +23,7 @@ app.use('/tweet', api);
 // app.use('/home', twtSlack)
 // app.use('/home', express.static(path.join(__dirname, 'dist')));
 
-mongoose.connect('mongodb://localhost/zappy-tweets', { promiseLibrary: require('bluebird') })
+mongoose.connect('mongodb://db/zappy-tweets', { promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
